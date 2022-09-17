@@ -36,7 +36,7 @@
 				<!-- / Page Content -->
 
 				<!-- Layout Footer -->
-				<DashboardFooter></DashboardFooter>
+				<!-- <DashboardFooter></DashboardFooter> -->
 				<!-- / Layout Footer -->
 
 				

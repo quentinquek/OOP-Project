@@ -6,12 +6,12 @@
 <template>
 	<div class="sign-in">
 		
-		<a-row type="flex" :gutter="[24,24]" justify="space-around" align="middle">
+		<a-row type="flex" justify="space-around" align="middle">
 
 			<!-- Sign In Form Column -->
-			<a-col :span="24" :md="12" :lg="{span: 12, offset: 0}" :xl="{span: 6, offset: 2}" class="col-form">
+			<a-col :span="24" :md="12" :lg="{span: 12, offset: 0}" :xl="{span: 6, offset: 2}" class="col-form" :style="{'background-color': 'white'}">
 				<h1 class="mb-15">Sign In</h1>
-				<h5 class="font-regular text-muted">Enter your email and password to sign in</h5>
+				<h5 class="font-regular text-muted text-center">Welcome Back! 👋</h5>
 
 				<!-- Sign In Form -->
 				<a-form
@@ -25,22 +25,22 @@
 						<a-input 
 						v-decorator="[
 						'email',
-						{ rules: [{ required: true, message: 'Please input your email!' }] },
+						{ rules: [{ required: true, message: 'Please enter your email!' }] },
 						]" placeholder="Email" />
 					</a-form-item>
 					<a-form-item class="mb-5" label="Password" :colon="false">
 						<a-input
 						v-decorator="[
 						'password',
-						{ rules: [{ required: true, message: 'Please input your password!' }] },
+						{ rules: [{ required: true, message: 'Please enter your password!' }] },
 						]" type="password" placeholder="Password" />
 					</a-form-item>
-					<a-form-item class="mb-10">
+					<!-- <a-form-item class="mb-10">
     					<a-switch v-model="rememberMe" /> Remember Me
-					</a-form-item>
+					</a-form-item> -->
 					<a-form-item>
-						<a-button type="primary" block html-type="submit" class="login-form-button">
-							SIGN IN
+						<a-button block html-type="submit" class="login-form-button" :style="{'background-color': '#0C41FF', 'color': 'white'}">
+							LOGIN
 						</a-button>
 					</a-form-item>
 				</a-form>
@@ -92,5 +92,6 @@
 <style lang="scss">
 	body {
 		background-color: #ffffff;
+		background-image: 'url(images/sss-background.png)';
 	}
 </style>

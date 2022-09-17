@@ -26,22 +26,22 @@
 		<!-- / Authors Table -->
 
 		<!-- Projects Table -->
-		<a-row :gutter="24" type="flex">
+		<!-- <a-row :gutter="24" type="flex"> -->
 
 			<!-- Projects Table Column -->
-			<a-col :span="24" class="mb-24">
+			<!-- <a-col :span="24" class="mb-24"> -->
 
 				<!-- Projects Table Column -->
-				<CardProjectTable2
+				<!-- <CardProjectTable2
 					:data="table2Data"
 					:columns="table2Columns"
-				></CardProjectTable2>
+				></CardProjectTable2> -->
 				<!-- / Projects Table Column -->
 
-			</a-col>
+			<!-- </a-col> -->
 			<!-- / Projects Table Column -->
 
-		</a-row>
+		<!-- </a-row> -->
 		<!-- / Projects Table -->
 
 	</div>
@@ -58,24 +58,29 @@
 	// "Authors" table list of columns and their properties.
 	const table1Columns = [
 		{
-			title: 'AUTHOR',
-			dataIndex: 'author',
-			scopedSlots: { customRender: 'author' },
+			title: 'Booking ID',
+			dataIndex: 'booking',
+			scopedSlots: { customRender: 'booking' },
 		},
 		{
-			title: 'FUNCTION',
-			dataIndex: 'func',
-			scopedSlots: { customRender: 'func' },
+			title: 'Place',
+			dataIndex: 'place',
+			scopedSlots: { customRender: 'place' },
 		},
 		{
-			title: 'STATUS',
+			title: 'Number of Pass',
+			dataIndex: 'pass',
+			class: 'text-muted',
+		},
+		{
+			title: 'Visit Date',
+			dataIndex: 'visitDate',
+			class: 'text-muted',
+		},
+		{
+			title: 'Booking Status',
 			dataIndex: 'status',
 			scopedSlots: { customRender: 'status' },
-		},
-		{
-			title: 'EMPLOYED',
-			dataIndex: 'employed',
-			class: 'text-muted',
 		},
 		{
 			title: '',
@@ -88,88 +93,21 @@
 	const table1Data = [
 		{
 			key: '1',
-			author: {
-				avatar: 'images/face-2.jpg',
-				name: 'Michael John',
-				email: 'michael@mail.com',
-			},
-			func: {
-				job: 'Manager',
-				department: 'Organization',
-			},
-			status: 1,
-			employed: '23/04/18',
+			booking: 'B1',
+			place: 'Singapore Zoo',
+			pass: '2',
+			status: true,
+			visitDate: '23/04/18',
 		},
 		{
 			key: '2',
-			author: {
-				avatar: 'images/face-3.jpg',
-				name: 'Alexa Liras',
-				email: 'alexa@mail.com',
-			},
-			func: {
-				job: 'Programator',
-				department: 'Developer',
-			},
-			status: 0,
-			employed: '23/12/20',
-		},
-		{
-			key: '3',
-			author: {
-				avatar: 'images/face-1.jpg',
-				name: 'Laure Perrier',
-				email: 'laure@mail.com',
-			},
-			func: {
-				job: 'Executive',
-				department: 'Projects',
-			},
-			status: 1,
-			employed: '13/04/19',
-		},
-		{
-			key: '4',
-			author: {
-				avatar: 'images/face-4.jpg',
-				name: 'Miriam Eric',
-				email: 'miriam@mail.com',
-			},
-			func: {
-				job: 'Marketing',
-				department: 'Organization',
-			},
-			status: 1,
-			employed: '03/04/21',
-		},
-		{
-			key: '5',
-			author: {
-				avatar: 'images/face-5.jpeg',
-				name: 'Richard Gran',
-				email: 'richard@mail.com',
-			},
-			func: {
-				job: 'Manager',
-				department: 'Organization',
-			},
-			status: 0,
-			employed: '23/03/20',
-		},
-		{
-			key: '6',
-			author: {
-				avatar: 'images/face-6.jpeg',
-				name: 'John Levi',
-				email: 'john@mail.com',
-			},
-			func: {
-				job: 'Tester',
-				department: 'Developer',
-			},
-			status: 0,
-			employed: '14/04/17',
-		},
+			booking: 'B2',
+			place: 'River Safari',
+			pass: '1',
+			status: false, 
+			visitDate: '23/12/20',
+		}
+		
 	];
 	
 	// "Projects" table list of columns and their properties.

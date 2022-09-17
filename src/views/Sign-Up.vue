@@ -20,7 +20,7 @@
 			<template #title>
 				<h5 class="font-semibold text-center">Register With</h5>
 			</template>
-			<div class="sign-up-gateways">
+			<!-- <div class="sign-up-gateways">
     			<a-button>
 					<img src="images/logos/logos-facebook.svg" alt="">
 				</a-button>
@@ -30,8 +30,8 @@
     			<a-button>
 					<img src="images/logos/Google__G__Logo.svg.png" alt="">
 				</a-button>
-			</div>
-			<p class="text-center my-25 font-semibold text-muted">Or</p>
+			</div> -->
+			<!-- <p class="text-center my-25 font-semibold text-muted">Or</p> -->
 			<a-form
 				id="components-form-demo-normal-login"
 				:form="form"

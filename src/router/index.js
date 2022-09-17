@@ -24,18 +24,30 @@ let routes = [
 		component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'),
 	},
 	{
+		path: '/calendar',
+		name: 'Calendar',
+		layout: "dashboard",
+		component: () => import('../views/Calendar.vue'),
+	},
+	{
 		path: '/layout',
 		name: 'Layout',
 		layout: "dashboard",
 		component: () => import('../views/Layout.vue'),
 	},
 	{
-		path: '/tables',
-		name: 'Tables',
+		path: '/my-bookings',
+		name: 'My Bookings',
 		layout: "dashboard",
-		component: () => import('../views/Tables.vue'),
+		component: () => import('../views/MyBookings.vue'),
 	},
 	{
+		path: '/manage-corporate-pass',
+		name: 'Manage Corporate Pass',
+		layout: "dashboard",
+		component: () => import('../views/ManageCorporatePass.vue'),
+	},
+	{ // not in use
 		path: '/billing',
 		name: 'Billing',
 		layout: "dashboard",
