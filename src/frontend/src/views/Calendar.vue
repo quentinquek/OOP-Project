@@ -1,5 +1,5 @@
 <template>
-  <a-calendar>
+  <a-calendar :value="date" @select="onSelect" @panelChange="onPanelChange">
     <ul class="events" slot="dateCellRender" slot-scope="value">
       <li v-for="item in getListData(value)" :key="item.content">
         <a-badge :status="item.type" :text="item.content" />
@@ -13,7 +13,11 @@
     </template>
   </a-calendar>
 </template>
+
 <script>
+import { defineComponent, ref } from 'vue';
+import moment, { Moment } from 'moment';
+
 export default {
   methods: {
     getListData(value) {
@@ -49,9 +53,31 @@ export default {
         return 1394;
       }
     },
+    setup() {
+    const date = ref(moment('2022-09-25'));
+    const selectedValue = ref(moment('2022-09-25'));
+    const date1 = ref(moment('2022-09-25'));
+
+    const onSelect = value => {
+      date.value = value;
+      selectedValue.value = value;
+    };
+
+    const onPanelChange = value => {
+      date.value = value;
+    };
+    return {
+      date,
+      selectedValue,
+      date1,
+      onSelect,
+      onPanelChange,
+    };
+  },
   }
 }
 </script>
+
 <style scoped>
 .events {
   list-style: none;

@@ -1,6 +1,5 @@
 <!-- 
-	This is the tables page, it uses the dashboard layout in: 
-	"./layouts/Dashboard.vue" .
+	This is the Individual Booking Page.
  -->
 
 <template>
@@ -10,10 +9,10 @@
       <!-- Authors Table Column -->
       <a-col :span="24" class="mb-24">
         <!-- Authors Table Card -->
-        <CardAuthorTable
+        <CardBookingDetails
           :data="table1Data"
           :columns="table1Columns"
-        ></CardAuthorTable>
+        ></CardBookingDetails>
         <!-- / Authors Table Card -->
       </a-col>
       <!-- / Authors Table Column -->
@@ -23,12 +22,11 @@
 
 <script>
 // "Authors" table component.
-import CardAuthorTable from "../components/Cards/CardBookingDetails";
-
+import CardBookingDetails from "../components/Cards/CardBookingDetails";
 
 export default {
   components: {
-    CardAuthorTable,
+    CardBookingDetails,
   },
 };
 </script>

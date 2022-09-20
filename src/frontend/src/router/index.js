@@ -12,17 +12,17 @@ let routes = [
   {
     path: "/",
     name: "Home",
-    redirect: "/dashboard",
+    redirect: "/calendar",
   },
   {
-    path: "/dashboard",
+    path: "/booking-dashboard",
     name: "Dashboard",
     layout: "dashboard",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "dashboard" */ "../views/Dashboard.vue"),
+      import(/* webpackChunkName: "dashboard" */ "../views/BookingDashboard.vue"),
   },
   {
     path: "/calendar",
@@ -55,6 +55,18 @@ let routes = [
     component: () => import("../views/ManageCorporatePass.vue"),
   },
   {
+    path: "/manage-corporate-pass/create-attraction",
+    name: "Create Attraction",
+    layout: "dashboard",
+    component: () => import("../views/CreateAttraction.vue"),
+  },
+  {
+    path: "/manage-corporate-pass/edit-pass",
+    name: "Edit Pass",
+    layout: "dashboard",
+    component: () => import("../views/EditPass.vue"),
+  },
+  {
     // not in use
     path: "/billing",
     name: "Billing",
@@ -62,6 +74,7 @@ let routes = [
     component: () => import("../views/Billing.vue"),
   },
   {
+    // not in use
     path: "/rtl",
     name: "RTL",
     layout: "dashboard-rtl",

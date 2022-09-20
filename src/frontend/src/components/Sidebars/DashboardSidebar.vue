@@ -6,7 +6,7 @@
 		class="sider-primary"
 		breakpoint="lg"
 		collapsed-width="0"
-		width="250px"
+		width="280px"
 		:collapsed="sidebarCollapsed"
 		@collapse="$emit('toggleSidebar', ! sidebarCollapsed)"
 		:trigger="null"
@@ -22,9 +22,9 @@
 					<router-link to="/calendar">
 						<span class="icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7H4C3.44772 7 3 6.55228 3 6V4Z" fill="#111827"/>
-								<path d="M3 10C3 9.44771 3.44772 9 4 9H10C10.5523 9 11 9.44771 11 10V16C11 16.5523 10.5523 17 10 17H4C3.44772 17 3 16.5523 3 16V10Z" fill="#111827"/>
-								<path d="M14 9C13.4477 9 13 9.44771 13 10V16C13 16.5523 13.4477 17 14 17H16C16.5523 17 17 16.5523 17 16V10C17 9.44771 16.5523 9 16 9H14Z" fill="#111827"/>
+								<path d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7H4C3.44772 7 3 6.55228 3 6V4Z" fill="#0C41FF"/>
+								<path d="M3 10C3 9.44771 3.44772 9 4 9H10C10.5523 9 11 9.44771 11 10V16C11 16.5523 10.5523 17 10 17H4C3.44772 17 3 16.5523 3 16V10Z" fill="#0C41FF"/>
+								<path d="M14 9C13.4477 9 13 9.44771 13 10V16C13 16.5523 13.4477 17 14 17H16C16.5523 17 17 16.5523 17 16V10C17 9.44771 16.5523 9 16 9H14Z" fill="#0C41FF"/>
 							</svg>
 						</span>
 						<span class="label">Calendar</span>
@@ -53,13 +53,13 @@
 					</router-link>
 				</a-menu-item>
 				<a-menu-item>
-					<router-link to="/dashboard">
+					<router-link to="/booking-dashboard">
 						<span class="icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 4.34315 4.34315 3 6 3H16C16.3788 3 16.725 3.214 16.8944 3.55279C17.0638 3.89157 17.0273 4.29698 16.8 4.6L14.25 8L16.8 11.4C17.0273 11.703 17.0638 12.1084 16.8944 12.4472C16.725 12.786 16.3788 13 16 13H6C5.44772 13 5 13.4477 5 14V17C5 17.5523 4.55228 18 4 18C3.44772 18 3 17.5523 3 17V6Z" fill="#111827"/>
 							</svg>
 						</span>
-						<span class="label">Dashboard</span>
+						<span class="label">Booking Dashboard</span>
 					</router-link>
 				</a-menu-item>
 				<a-menu-item class="menu-item-header">
@@ -151,7 +151,7 @@
 			// Main sidebar color.
 			sidebarColor: {
 				type: String,
-				default: "primary",
+				default: "#0C41FF",
 			},
 			
 			// Main sidebar theme : light, white, dark.

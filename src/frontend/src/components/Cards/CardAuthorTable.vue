@@ -33,14 +33,16 @@
 
 			<template slot="status" slot-scope="status">
 				<a-tag class="tag-status" :class="status ? 'ant-tag-green' : 'ant-tag-red'">
-					{{ status ? "Activate" : "Inactive" }}
+					{{ status ? "Active" : "Inactive" }}
 				</a-tag>
 			</template>
 
 			<template slot="editBtn" slot-scope="row">
-				<a-button type="primary" ghost :data-id="row.key" class="btn-edit">
-					Edit
-				</a-button>
+				<router-link to="/my-bookings/booking-details">
+					<a-button type="primary" ghost :data-id="row.key">
+						View Booking
+					</a-button>
+				</router-link>
 			</template>
 
 		</a-table>
