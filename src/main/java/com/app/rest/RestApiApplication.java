@@ -1,13 +1,14 @@
-package com.example.demo;
+package com.app.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class DemoApplication {
+@RestController
+public class RestApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(RestApiApplication.class, args);
 	}
-
 }
