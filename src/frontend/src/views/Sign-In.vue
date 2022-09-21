@@ -10,8 +10,8 @@
       <a-col
         :span="24"
         :md="12"
-        :lg="{ span: 12}"
-        :xl="{ span: 6}"
+        :lg="{ span: 12 }"
+        :xl="{ span: 6 }"
         class="col-form"
         :style="{ 'background-color': 'white' }"
       >
@@ -78,6 +78,15 @@
             class="font-bold text-dark"
             :style="{ color: 'blue' }"
             >Forgot Password</router-link
+          >
+        </p>
+        <p class="font-semibold text-muted text-center">
+          Don't have an account?
+          <router-link
+            to="/sign-up"
+            class="font-bold text-dark"
+            :style="{ color: 'lightblue' }"
+            >Sign up</router-link
           >
         </p>
       </a-col>

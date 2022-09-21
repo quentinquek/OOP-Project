@@ -107,7 +107,7 @@
 	}
 
 	* {
-		color: $color-gray-1;
+		color: rgb(74, 165, 226);
 	}
 
 	.content {
@@ -121,6 +121,9 @@
 			@media( min-width: $md) {
 				font-size: 48px;
 			}
+		}
+		p{
+			color: rgb(169, 210, 230);
 		}
 	}
 }
